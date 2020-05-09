@@ -2,10 +2,14 @@
 import * as PIXI from 'pixi.js';
 import MsApp from './msapp';
 
-// Get HTML container
+// ---------------------------------------------------------
+// Create WebGL Editor
+// ---------------------------------------------------------
+
+// DOM
 const mainContainer = document.getElementById('mainContainer');
 
-// Create PIXI canvas
+// Pixi.js
 const app = new PIXI.Application({
   width: 500,
   height: 500,
@@ -14,9 +18,9 @@ const app = new PIXI.Application({
 });
 
 // Initialize MasaoApp main program
-let msapp = new MsApp(app, mainContainer);
+const msapp = new MsApp(app, mainContainer);
 msapp.createView();
 msapp.drawGrid();
 window.addEventListener('resize', () => {
-  msapp.resize();
-}, false);
+  msapp.resize(mainContainer);
+});
