@@ -18,6 +18,7 @@
     "webpack-merge": "^4.2.2"
   },
   "dependencies": {
-    "eslint-config-airbnb": "^18.1.0"
+    "eslint-config-airbnb": "^18.1.0",
+    "pixi.js": "^5.2.4"
   }
 }
