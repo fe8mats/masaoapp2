@@ -46,11 +46,11 @@ export default class Editor {
     }
   }
 
-  get grid() {
+  get useGrid() {
     return this.grid;
   }
 
-  set grid(bool) {
+  set useGrid(bool) {
     this.grid = bool;
   }
 
