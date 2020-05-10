@@ -1,32 +1,32 @@
 /* eslint-disable no-console */
 export default class DataManager {
-  constructor(layermode = 0, x = 180, y = 30) {
-    this.mapData = '';
-    this.layData = '';
+  constructor(layermode = 0, version = 'fx', x = 180, y = 30) {
     this.layerMode = layermode;
-    this.layerX = 180;
-    this.layerY = 30;
-    if (this.layerMode !== 0) {
-      this.layerX = x;
-      this.layerY = y;
+    this.version = version;
+    this.x = x;
+    this.y = y;
+    this.mapBase = [];
+    this.map = [];
+    this.layer = [];
+
+    for (let i = 0; i < this.x; i += 1) {
+      this.mapBase[i] = 0;
     }
+    for (let i = 0; i < this.y; i += 1) {
+      this.map[i] = this.mapBase;
+    }
+    console.log(this.map);
   }
 
-  // ---------------------------------------------------------
-  // Mapdata
-  // ---------------------------------------------------------
-  createMapdata() {
-    this.mapData = '............................................................';
-    this.layData = this.mapData + this.mapData;
+  get GameWidth() {
+    return this.x;
+  }
 
-    switch (this.layerMode) {
-      case 1:
+  get GameHeight() {
+    return this.y;
+  }
 
-        break;
-
-      default:
-        console.log('normal-layer');
-        break;
-    }
+  setMapChip(chip, x, y) {
+    this.map[y][x] = chip;
   }
 }

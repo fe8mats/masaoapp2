@@ -1,1 +1,1 @@
-#mainContainer{width:512px;height:320px}#navbar{margin:0;height:0px}
+html,body{margin:0}#mainContainer{position:relative;width:512px;height:320px;overflow:scroll;background-color:#5cc1fb}#navbar{margin:0;height:0px}
